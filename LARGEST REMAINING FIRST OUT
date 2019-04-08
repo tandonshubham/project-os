@@ -1,0 +1,143 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+
+
+{
+int p1=2132;
+int p2=2102;
+int p3=2453;
+float Avg_Bt;
+float Avg_At;
+int at1=0;
+int at2=0;
+int at3=0;
+int bt1=2,x=2;
+int bt2=4,y=4;
+int bt3=8,z=8;
+int maxbt3;
+int maxbt2;
+int maxbt1;
+int t1,t2,t3;
+int w1,w2,w3;
+for(int i=0;i<14;i++)
+{
+        if(bt3>bt2&&bt3>bt1)
+        {
+                if(bt3!=0)
+
+                {
+                        bt3--;
+                        if(bt3==0)
+                        {
+                                maxbt3=i+1        ;
+                        }
+                        printf("PROCESS 3 IS EXECUTING FOR %dTH SECOND\n",i+1);
+                }
+
+        }
+
+        else if(bt3==bt2)
+        {
+                if(p2<p3)
+
+                {
+                        if(bt2!=0)
+                        {
+                        bt2--;
+                        if(bt2==0)
+                        {
+                                maxbt2=i+1;
+                        }
+                        printf("PROCESS 2 IS EXECUTING FOR %dTH SECOND\n",i+1);
+                        }
+                }
+                else
+                {
+                         if(bt3!=0)
+                        {
+                                bt3--;
+                                if(bt3==0)
+                                {
+                                        maxbt3=i;
+                                }
+                                printf("process 3");
+                        }
+                }
+        }
+    else if(bt3==bt1)
+        {
+                 if(p1<p3)
+                {
+                        if(bt1!=0)
+                        {
+                        bt1--;
+                        if(bt1==0)
+                        {
+                                maxbt1=i+1;
+                        }
+                        printf("PROCESS 1 IS EXECUTING FOR %dTH SECOND\n",i+1);
+                        }
+                }
+                else
+                {
+                        if(bt3!=0)
+                        {
+                                bt3--;
+                                if(bt3==0)
+                                {
+                                        maxbt3=i;
+                                }
+                        }
+                }
+        }
+        else if(bt2==bt1)
+                {
+                 if(p2<p1)
+                {
+                        if(bt2!=0)
+                        {
+                                bt2--;
+                                if(bt2==0)
+                                {
+                                        maxbt2=i+1;
+                                }
+                                printf("PROCESS 2 IS EXECUTING FOR %dTH SECOND\n",i+1);
+                        }
+                }
+                else
+                {
+                        if(bt1!=0)
+                        {
+                                bt1--;
+      if(bt1==0)
+                                {
+                                        maxbt1=i+1;
+                                }
+                                printf("process 1");
+                        }
+                }
+        }
+
+}
+printf("\n\n\n");
+printf("AFTER %d SECOUNDS PROCESS 1 WILL BE EXECUTED\n",maxbt1 );
+printf("\n");
+printf("AFTER %d SECONDS PROCESS 2 WILL BE EXECUTED\n",maxbt2);
+printf("\n");
+printf("AFTER %d SECOUNDS PROCESS 3 WILL BE EXECUTED\n",maxbt3);
+printf("\n\n\n");
+t1=maxbt1-at1;
+t2=maxbt2-at2;
+t3=maxbt3-at3;
+Avg_At=(t1+t2+t3)/3;
+w1=t1-x;
+w2=t2-y;
+w3=t3-z;
+Avg_Bt=(w1+w2+w3)/3;
+printf("\n\n\n");
+printf("AVERAGE TURN ARROUND TIME(TAT) OF THE P1, P2, P3 IS:- %f\n",Avg_At);
+printf("\n");
+printf("AVERAGE WAITING TIME (WT) OF THE P1, P2, P3 IS:- %f\n",Avg_Bt);
+printf("\n\n\n");
+}
